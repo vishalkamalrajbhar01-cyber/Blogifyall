@@ -32,7 +32,7 @@ const connectDB = async () => {
     try {
 
         await mongoose.connect(
-            'mongodb://localhost:27017/blogify'
+            'mongodb+srv://vishalkamalrajbhar01_db_user:omjEGlGo0PiE8kTK@cluster0.o5oxb6i.mongodb.net/blogify'
         );
 
         console.log("MongoDB connected 🥳");
