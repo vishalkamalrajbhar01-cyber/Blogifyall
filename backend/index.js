@@ -22,17 +22,12 @@ app.use(express.urlencoded({ extended: true }));
 
 
 
-app.use(cors({
-    origin: "https://blogify121.netlify.app",
-    methods: ["GET", "POST", "PATCH", "DELETE"],
-    credentials: true
-}));
+app.use(cors())
 
-app.options('*', cors());
 
 
 // ----- PORT -----
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 
 // ----- CONNECT DB FUNCTION -----
