@@ -25,7 +25,6 @@ const HomePage = () => {
 
     //------------------------------------------------------student-----------------------------------------------------
     const [students, setStudents] = useState([]);
-
     const fetchStudents = async () => {
         try {
 
@@ -44,7 +43,6 @@ const HomePage = () => {
 
     //------------------------------------------------------product-----------------------------------------------------
     const [products, setProducts] = useState([]);
-
     const fetchProducts = async () => {
         try {
 
@@ -61,7 +59,6 @@ const HomePage = () => {
 
     //------------------------------------------------------teacher-----------------------------------------------------
     const [teacher, setTeacher] = useState([]);
-
     const fetchTeacher = async () => {
         try {
 
@@ -78,7 +75,6 @@ const HomePage = () => {
 
      //------------------------------------------------------teacher-----------------------------------------------------
     const [category, setCategory] = useState([]);
-
     const fetchCategory = async () => {
         try {
 
