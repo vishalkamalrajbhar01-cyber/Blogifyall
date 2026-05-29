@@ -19,7 +19,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-app.use(cors());
+
+
+
+app.use(cors({
+    origin: "https://blogify121.netlify.app",
+    methods: ["GET", "POST", "PATCH", "DELETE"],
+    credentials: true
+}));
+
+app.options('*', cors());
 
 
 // ----- PORT -----
@@ -36,7 +45,6 @@ const connectDB = async () => {
         );
 
         console.log("MongoDB connected 🥳");
-
     } catch (error) {
 
         console.log("MongoDB not connected");
@@ -171,7 +179,7 @@ app.delete('/deleteblog/:id', async (req, res) => {
 app.get('/getblogbyid/:id', async (req, res) => {
     try {
         const { id } = req.params
-        let blogDetails = await BlogModel.findOne({ _id: id })
+        let blogDetails = await BlogModel.findById(id)
 
         res.status(200).json({ success: true, message: "Blog Fetched Successfully", blogDetails })
 
