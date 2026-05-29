@@ -95,10 +95,10 @@ const HomePage = () => {
 
     useEffect(() => {
         fetchBlog();
-        fetchStudents();
-        fetchProducts();
-        fetchTeacher();
-        fetchCategory();
+        // fetchStudents();
+        // fetchProducts();
+        // fetchTeacher();
+        // fetchCategory();
     }, []);
 
     return (
